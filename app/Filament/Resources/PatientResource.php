@@ -33,6 +33,8 @@ class PatientResource extends Resource
                 Forms\Components\Select::make('type')
                 ->options([
                     'cat' => 'Cat',
+                
+
                     'dog' => 'Dog',
                     'rabbit' => 'Rabbit',
                 ])->required(),
