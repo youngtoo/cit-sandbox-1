@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('issue_status');
             $table->string('description')->nullable();
+            $table->boolean('resolved')->default(false);
             $table->boolean('active')->default(false);
             $table->softDeletes($column = 'deleted_at', $precision = 0);
             $table->timestamps();

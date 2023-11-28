@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('service_types', function (Blueprint $table) {
             $table->id();
             $table->string('service_type');
+            $table->integer('resolution_sla')->default(0);
+            $table->integer('response_sla')->default(0);
             $table->string('description')->nullable();
             $table->boolean('active')->default(false);
             $table->softDeletes($column = 'deleted_at', $precision = 0);
